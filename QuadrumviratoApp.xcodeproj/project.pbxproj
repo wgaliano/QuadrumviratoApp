@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C222A56296F0E1D00BA9FBA /* QuadrumviratoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C222A55296F0E1D00BA9FBA /* QuadrumviratoAppApp.swift */; };
+		137AFF9D296F151100D3E37F /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFF9B296F151100D3E37F /* Recipe.swift */; };
+		137AFF9E296F151100D3E37F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFF9C296F151100D3E37F /* Category.swift */; };
+		137AFFA4296F154800D3E37F /* FeaturedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA1296F154800D3E37F /* FeaturedCardView.swift */; };
+		137AFFA5296F154800D3E37F /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA2296F154800D3E37F /* CategoryCardView.swift */; };
+		137AFFA6296F154800D3E37F /* CoursesCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA3296F154800D3E37F /* CoursesCardView.swift */; };
+		137AFFAA296F155F00D3E37F /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA7296F155F00D3E37F /* CategoriesView.swift */; };
+		137AFFAB296F155F00D3E37F /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA8296F155F00D3E37F /* CoursesView.swift */; };
+		137AFFAC296F155F00D3E37F /* FeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA9296F155F00D3E37F /* FeaturedView.swift */; };
+		3C222A56296F0E1D00BA9FBA /* QuadrumviratoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C222A55296F0E1D00BA9FBA /* QuadrumviratoApp.swift */; };
 		3C222A58296F0E1D00BA9FBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C222A57296F0E1D00BA9FBA /* ContentView.swift */; };
 		3C222A5A296F0E1F00BA9FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C222A59296F0E1F00BA9FBA /* Assets.xcassets */; };
 		3C222A5D296F0E1F00BA9FBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C222A5C296F0E1F00BA9FBA /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		137AFF9B296F151100D3E37F /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		137AFF9C296F151100D3E37F /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		137AFFA1296F154800D3E37F /* FeaturedCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedCardView.swift; sourceTree = "<group>"; };
+		137AFFA2296F154800D3E37F /* CategoryCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
+		137AFFA3296F154800D3E37F /* CoursesCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesCardView.swift; sourceTree = "<group>"; };
+		137AFFA7296F155F00D3E37F /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		137AFFA8296F155F00D3E37F /* CoursesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		137AFFA9296F155F00D3E37F /* FeaturedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
 		3C222A52296F0E1D00BA9FBA /* QuadrumviratoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuadrumviratoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C222A55296F0E1D00BA9FBA /* QuadrumviratoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrumviratoAppApp.swift; sourceTree = "<group>"; };
+		3C222A55296F0E1D00BA9FBA /* QuadrumviratoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrumviratoApp.swift; sourceTree = "<group>"; };
 		3C222A57296F0E1D00BA9FBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C222A59296F0E1F00BA9FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C222A5C296F0E1F00BA9FBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -32,6 +48,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137AFF9A296F151100D3E37F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				137AFF9B296F151100D3E37F /* Recipe.swift */,
+				137AFF9C296F151100D3E37F /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		137AFF9F296F153900D3E37F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				137AFFA7296F155F00D3E37F /* CategoriesView.swift */,
+				137AFFA8296F155F00D3E37F /* CoursesView.swift */,
+				137AFFA9296F155F00D3E37F /* FeaturedView.swift */,
+				3C222A57296F0E1D00BA9FBA /* ContentView.swift */,
+				137AFFA0296F154800D3E37F /* Card */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		137AFFA0296F154800D3E37F /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				137AFFA1296F154800D3E37F /* FeaturedCardView.swift */,
+				137AFFA2296F154800D3E37F /* CategoryCardView.swift */,
+				137AFFA3296F154800D3E37F /* CoursesCardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		3C222A49296F0E1D00BA9FBA = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +98,9 @@
 		3C222A54296F0E1D00BA9FBA /* QuadrumviratoApp */ = {
 			isa = PBXGroup;
 			children = (
-				3C222A55296F0E1D00BA9FBA /* QuadrumviratoAppApp.swift */,
-				3C222A57296F0E1D00BA9FBA /* ContentView.swift */,
+				137AFF9F296F153900D3E37F /* View */,
+				137AFF9A296F151100D3E37F /* Model */,
+				3C222A55296F0E1D00BA9FBA /* QuadrumviratoApp.swift */,
 				3C222A59296F0E1F00BA9FBA /* Assets.xcassets */,
 				3C222A5B296F0E1F00BA9FBA /* Preview Content */,
 			);
@@ -137,8 +185,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				137AFFAC296F155F00D3E37F /* FeaturedView.swift in Sources */,
+				137AFFAA296F155F00D3E37F /* CategoriesView.swift in Sources */,
+				137AFF9D296F151100D3E37F /* Recipe.swift in Sources */,
 				3C222A58296F0E1D00BA9FBA /* ContentView.swift in Sources */,
-				3C222A56296F0E1D00BA9FBA /* QuadrumviratoAppApp.swift in Sources */,
+				137AFFA6296F154800D3E37F /* CoursesCardView.swift in Sources */,
+				3C222A56296F0E1D00BA9FBA /* QuadrumviratoApp.swift in Sources */,
+				137AFF9E296F151100D3E37F /* Category.swift in Sources */,
+				137AFFA5296F154800D3E37F /* CategoryCardView.swift in Sources */,
+				137AFFA4296F154800D3E37F /* FeaturedCardView.swift in Sources */,
+				137AFFAB296F155F00D3E37F /* CoursesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

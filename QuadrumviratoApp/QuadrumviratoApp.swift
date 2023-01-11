@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct QuadrumviratoAppApp: App {
+struct QuadrumviratoApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

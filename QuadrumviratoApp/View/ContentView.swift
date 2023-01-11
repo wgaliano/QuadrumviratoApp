@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  QuadrumviratoApp
+//  ECS
 //
-//  Created by Walter Galiano on 11/01/23.
+//  Created by Francesco Merola on 11/01/23.
 //
 
 import SwiftUI
@@ -10,17 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world")
+            FeaturedView()
+            CategoriesView()
         }
-        .padding()
+        
+        
+        
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
