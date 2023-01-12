@@ -19,6 +19,8 @@
 		3C222A58296F0E1D00BA9FBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C222A57296F0E1D00BA9FBA /* ContentView.swift */; };
 		3C222A5A296F0E1F00BA9FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C222A59296F0E1F00BA9FBA /* Assets.xcassets */; };
 		3C222A5D296F0E1F00BA9FBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C222A5C296F0E1F00BA9FBA /* Preview Assets.xcassets */; };
+		3CB4E279297051DF008D1FBD /* RecipeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */; };
+		3CB4E27B29705834008D1FBD /* Ingedient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4E27A29705834008D1FBD /* Ingedient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		3C222A57296F0E1D00BA9FBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C222A59296F0E1F00BA9FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C222A5C296F0E1F00BA9FBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSheetView.swift; sourceTree = "<group>"; };
+		3CB4E27A29705834008D1FBD /* Ingedient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingedient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			children = (
 				137AFF9B296F151100D3E37F /* Recipe.swift */,
 				137AFF9C296F151100D3E37F /* Category.swift */,
+				3CB4E27A29705834008D1FBD /* Ingedient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -64,6 +69,7 @@
 				137AFFA8296F155F00D3E37F /* CoursesView.swift */,
 				137AFFA9296F155F00D3E37F /* FeaturedView.swift */,
 				3C222A57296F0E1D00BA9FBA /* ContentView.swift */,
+				3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */,
 				137AFFA0296F154800D3E37F /* Card */,
 			);
 			path = View;
@@ -186,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				137AFFAC296F155F00D3E37F /* FeaturedView.swift in Sources */,
+				3CB4E27B29705834008D1FBD /* Ingedient.swift in Sources */,
 				137AFFAA296F155F00D3E37F /* CategoriesView.swift in Sources */,
 				137AFF9D296F151100D3E37F /* Recipe.swift in Sources */,
 				3C222A58296F0E1D00BA9FBA /* ContentView.swift in Sources */,
@@ -193,6 +200,7 @@
 				3C222A56296F0E1D00BA9FBA /* QuadrumviratoApp.swift in Sources */,
 				137AFF9E296F151100D3E37F /* Category.swift in Sources */,
 				137AFFA5296F154800D3E37F /* CategoryCardView.swift in Sources */,
+				3CB4E279297051DF008D1FBD /* RecipeSheetView.swift in Sources */,
 				137AFFA4296F154800D3E37F /* FeaturedCardView.swift in Sources */,
 				137AFFAB296F155F00D3E37F /* CoursesView.swift in Sources */,
 			);

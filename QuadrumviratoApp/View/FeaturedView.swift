@@ -20,7 +20,6 @@ struct FeaturedView: View {
                 GeometryReader { g in
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack () {
-                            
                             ForEach(recipes) { recipe in
                                 Button{
                                     showingRecipeSheet.toggle()
@@ -29,9 +28,9 @@ struct FeaturedView: View {
                                     FeaturedCardView(recipe: recipe)
                                 }
                                 .padding(.trailing)
-                                /*.sheet(item: $selectedRecipe) { selectedRecipe in
-                                    TeamView(team: selectedTeam)
-                                }*/
+                                .sheet(item: $selectedRecipe) { selectedRecipe in
+                                    RecipeSheetView(recipe: selectedRecipe)
+                                }
                             }
                         }.padding()
                     }

@@ -7,16 +7,20 @@
 
 import Foundation
 
-struct Recipe: Identifiable, Hashable {
+struct Recipe: Identifiable{
     
     let id = UUID()
-    let name: String // name = imageString
-    let ingredients: [String]
+    let name: String
+    let ingredients: [Ingredient]
+    let description: String
+    let media: [String]
+    let process: String
     
     static func getRecipes () -> [Recipe]{
         return [
-            Recipe(name: "Tuna with Potatoes", ingredients: ["Tonno","Patate"]),
-            Recipe(name: "Insalata di tonno e fagioli", ingredients: ["Tonno", "Fagioli"])
+            Recipe(name: "Tuna with Potatoes", ingredients: [Ingredient(name: "Tonno"),Ingredient(name: "Patate")], description: "jhbjh", media: ["yguy"], process: "ufytcv"),
+            Recipe(name: "Insalata di tonno e fagioli", ingredients: [Ingredient(name: "Tonno"),Ingredient(name: "Fagioli")], description: "jhbjh", media: ["yguy"], process: "ufytcv")
+            
         ]
     }
     

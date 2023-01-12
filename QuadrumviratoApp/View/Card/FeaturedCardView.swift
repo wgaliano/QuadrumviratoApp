@@ -26,7 +26,7 @@ struct FeaturedCardView: View {
 struct FeaturedCardView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let recipe: Recipe = Recipe(name: "Tuna with Potatoes", ingredients: ["Tonno","Patate"])
+        let recipe: Recipe = Recipe(name: "Tuna with Potatoes", ingredients: [Ingredient(name: "Tonno"),Ingredient(name: "Patate")], description: "jhbjh", media: ["yguy"], process: "ufytcv")
         
         FeaturedCardView(recipe: recipe)
     }
