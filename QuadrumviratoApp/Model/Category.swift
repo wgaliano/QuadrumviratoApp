@@ -10,9 +10,13 @@ import Foundation
 struct Category: Hashable, Identifiable {
     let id = UUID()
     let name: String
+    
+    static func getCategories() -> [Category]{
+        return [
+            Category(name: "Pesce azzurro"),
+            Category(name: "Pesce bianco")
+        ]
+    }
 }
 
-let categories: [Category] = [
-    Category(name: "Pesce azzurro"),
-    Category(name: "Pesce bianco")
-]
+

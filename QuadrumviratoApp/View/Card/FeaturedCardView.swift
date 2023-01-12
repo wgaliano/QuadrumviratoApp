@@ -12,14 +12,14 @@ struct FeaturedCardView: View {
     let recipe: Recipe
     
     var body: some View {
-        VStack {
-            Image("\(recipe.name)")
-                .resizable()
-        }
-        .cornerRadius(20)
-        .padding()
-        .frame(width: 390,height: 250)
-    
+        Image("\(recipe.name)")
+            .resizable()
+            .scaledToFill()
+            .frame(
+                width: UIScreen.main.bounds.width*(3/4),
+                height: UIScreen.main.bounds.height*(2/5)
+            )
+            .cornerRadius(20)
     }
 }
 

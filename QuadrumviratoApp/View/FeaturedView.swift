@@ -8,27 +8,35 @@
 import SwiftUI
 
 struct FeaturedView: View {
+    
+    var recipes: [Recipe] = Recipe.getRecipes()
+    @State private var selectedRecipe: Recipe?
+    @State private var showingRecipeSheet = false
+    
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Featured")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.leading, -160)
                 
-                ScrollView (.horizontal) {
-                    HStack {
-                        
-                        ForEach(recipes, id:\.self) { recipe in
-                            FeaturedCardView (recipe: recipe)
-                        }
+                GeometryReader { g in
+                    ScrollView (.horizontal, showsIndicators: false) {
+                        HStack () {
+                            
+                            ForEach(recipes) { recipe in
+                                Button{
+                                    showingRecipeSheet.toggle()
+                                    selectedRecipe = recipe
+                                } label: {
+                                    FeaturedCardView(recipe: recipe)
+                                }
+                                .padding(.trailing)
+                                /*.sheet(item: $selectedRecipe) { selectedRecipe in
+                                    TeamView(team: selectedTeam)
+                                }*/
+                            }
+                        }.padding()
                     }
                 }
-                
-                
-                
-                Spacer()
-            }
+            }.navigationTitle("Featured")
         }
     }
 }

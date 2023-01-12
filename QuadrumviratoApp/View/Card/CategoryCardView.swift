@@ -16,13 +16,17 @@ struct CategoryCardView: View {
             ZStack {
                 Image("\(category.name)")
                     .resizable()
+                    .scaledToFill()
+                    .frame(
+                        width: UIScreen.main.bounds.width*(4/5),
+                        height: UIScreen.main.bounds.height*(1/4)
+                    )
+                    .cornerRadius(20)
                 Text("\(category.name)")
                     .foregroundColor(.white)
                     .offset(x: -65, y: 70)
             }
-            .cornerRadius(20)
-            .padding()
-            .frame(width: 300,height: 215)
+            
     }
 }
 

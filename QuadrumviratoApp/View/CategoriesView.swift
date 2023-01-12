@@ -8,27 +8,23 @@
 import SwiftUI
 
 struct CategoriesView: View {
+    var categories = Category.getCategories()
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Categories")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding(.leading, -160)
                 
-                ScrollView (.horizontal) {
-                    HStack {
-                        
-                        ForEach(categories, id:\.self) { category in
-                            CategoryCardView (category: category)
-                        }
+                GeometryReader { g in
+                    ScrollView (.horizontal, showsIndicators: false) {
+                        HStack (spacing: 16) {
+                            
+                            ForEach(categories) { category in
+                                CategoryCardView (category: category)
+                            }
+                            
+                        }.padding()
                     }
                 }
-                
-                
-                
-                Spacer()
-            }
+            }.navigationTitle("Categories")
         }
     }
 }

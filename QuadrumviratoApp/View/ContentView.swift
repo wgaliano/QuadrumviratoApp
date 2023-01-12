@@ -9,9 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            FeaturedView()
-            CategoriesView()
+        NavigationStack {
+            ScrollView (.vertical, showsIndicators: false) {
+                GeometryReader { g in
+                    VStack {
+                        FeaturedView()
+                        CategoriesView()
+                    }
+                }
+            }
         }
         
         
