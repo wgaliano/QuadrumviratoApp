@@ -15,6 +15,7 @@ struct ContentView: View {
                     VStack {
                         FeaturedView()
                         CategoriesView()
+                        Text("Rido poco")
                     }
                 }
             }
