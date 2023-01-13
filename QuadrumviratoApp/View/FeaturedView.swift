@@ -37,7 +37,6 @@ struct FeaturedView: View {
                             }
                         }.padding()
                     }
-                
             }
         }
     }

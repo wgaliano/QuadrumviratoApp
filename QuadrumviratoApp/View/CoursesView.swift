@@ -22,21 +22,19 @@ struct CoursesView: View {
                     .padding(.leading, -170)
                 
                 
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack () {
-                            
-                            ForEach(courses) { course in
-                                Button{
-                                    showingCourseSheet.toggle()
-                                    selectedCourse = course
-                                } label: {
-                                    CourseCardView(course: course)
-                                }
-                                .padding(.trailing)
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack () {
+                        ForEach(courses) { course in
+                            Button{
+                                showingCourseSheet.toggle()
+                                selectedCourse = course
+                            } label: {
+                                CourseCardView(course: course)
                             }
-                        }.padding()
-                    }
-                
+                            .padding(.trailing)
+                        }
+                    }.padding()
+                }
             }
         }
     }

@@ -13,7 +13,7 @@ struct CourseCardView: View {
     
     var body: some View {
        
-            ZStack {
+            VStack {
                 Image("\(course.name)")
                     .resizable()
                     .scaledToFill()
@@ -23,8 +23,8 @@ struct CourseCardView: View {
                     )
                     .cornerRadius(20)
                 Text("\(course.name)")
-                    .foregroundColor(.white)
-                    .offset(x: -120, y: 90)
+                    .foregroundColor(.black)
+                    .bold()
             }
     }
 }

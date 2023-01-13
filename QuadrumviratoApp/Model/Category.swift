@@ -13,8 +13,8 @@ struct Category: Hashable, Identifiable {
     
     static func getCategories() -> [Category]{
         return [
-            Category(name: "Pesce azzurro"),
-            Category(name: "Pesce bianco")
+            Category(name: "Blue fish"),
+            Category(name: "White fish")
         ]
     }
 }

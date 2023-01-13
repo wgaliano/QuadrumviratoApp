@@ -13,21 +13,13 @@ struct ContentView: View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    
                     FeaturedView()
-                    
                     CategoriesView()
-                    
                     CoursesView()
                 }
-                
-                
-                
             }
+            .navigationTitle("RecipesAPP")
         }
-        
-        
-        
     }
 }
 
