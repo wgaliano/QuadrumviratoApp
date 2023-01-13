@@ -9,22 +9,33 @@ import SwiftUI
 
 struct CategoriesView: View {
     var categories = Category.getCategories()
+    @State private var showCategoryModal: Bool = false
+    @State private var selectedCategory: Category?
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack (spacing: 0) {
+                Text("Categories")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding(.leading, -170)
                 
-                GeometryReader { g in
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 16) {
                             
                             ForEach(categories) { category in
-                                CategoryCardView (category: category)
+                                Button {
+                                    showCategoryModal.toggle()
+                                    selectedCategory = category
+                                } label: {
+                                    CategoryCardView (category: category)
+                                }
+                                .padding(.trailing)
                             }
                             
                         }.padding()
                     }
-                }
-            }.navigationTitle("Categories")
+                
+            }
         }
     }
 }

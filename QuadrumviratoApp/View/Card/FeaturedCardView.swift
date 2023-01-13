@@ -16,8 +16,8 @@ struct FeaturedCardView: View {
             .resizable()
             .scaledToFill()
             .frame(
-                width: UIScreen.main.bounds.width*(3/4),
-                height: UIScreen.main.bounds.height*(2/5)
+                width: UIScreen.main.bounds.width*(3.5/4),
+                height: UIScreen.main.bounds.height*(1.8/4.8)
             )
             .cornerRadius(20)
     }

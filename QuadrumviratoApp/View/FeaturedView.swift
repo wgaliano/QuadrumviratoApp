@@ -15,9 +15,12 @@ struct FeaturedView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
+            VStack (spacing: 0) {
+                Text("Featured")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding(.leading, -170)
                 
-                GeometryReader { g in
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack () {
                             ForEach(recipes) { recipe in
@@ -34,8 +37,8 @@ struct FeaturedView: View {
                             }
                         }.padding()
                     }
-                }
-            }.navigationTitle("Featured")
+                
+            }
         }
     }
 }

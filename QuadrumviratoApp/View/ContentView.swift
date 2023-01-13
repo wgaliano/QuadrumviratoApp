@@ -1,3 +1,4 @@
+
 //
 //  ContentView.swift
 //  ECS
@@ -10,14 +11,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationStack {
-            ScrollView (.vertical, showsIndicators: false) {
-                GeometryReader { g in
-                    VStack {
-                        FeaturedView()
-                        CategoriesView()
-                        Text("Rido poco")
-                    }
+            ScrollView {
+                VStack {
+                    
+                    FeaturedView()
+                    
+                    CategoriesView()
+                    
+                    CoursesView()
                 }
+                
+                
+                
             }
         }
         
