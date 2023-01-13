@@ -13,9 +13,9 @@ struct CategoriesView: View {
     @State private var selectedCategory: Category?
     var body: some View {
         NavigationStack {
-            VStack (spacing: 0) {
+            VStack (spacing: -8) {
                 Text("Categories")
-                    .font(.title)
+                    .font(.title2)
                     .fontWeight(.semibold)
                     .padding(.leading, -170)
                 

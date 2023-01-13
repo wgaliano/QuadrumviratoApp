@@ -15,9 +15,9 @@ struct FeaturedView: View {
     
     var body: some View {
         NavigationStack {
-            VStack (spacing: 0) {
+            VStack (spacing: -8) {
                 Text("Featured")
-                    .font(.title)
+                    .font(.title2)
                     .fontWeight(.semibold)
                     .padding(.leading, -170)
                 

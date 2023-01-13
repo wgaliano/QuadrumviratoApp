@@ -18,7 +18,7 @@ struct ContentView: View {
                     CoursesView()
                 }
             }
-            .navigationTitle("RecipesAPP")
+            .navigationTitle("Discover")
         }
     }
 }
