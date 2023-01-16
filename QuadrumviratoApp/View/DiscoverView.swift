@@ -9,11 +9,28 @@
 import SwiftUI
 
 struct DiscoverView: View {
+    var recipes: [Recipe] = Recipe.getRecipes()
+    @State private var selectedRecipe: Recipe?
+    @State private var showingRecipeSheet = false
+    
     var body: some View {
         NavigationStack {
-            ScrollView {
-                VStack {
-                    FeaturedView()
+            VStack (spacing: -8) {
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack () {
+                        ForEach(recipes) { recipe in
+                            Button{
+                                showingRecipeSheet.toggle()
+                                selectedRecipe = recipe
+                            } label: {
+                                FeaturedCardView(recipe: recipe)
+                            }
+                            .padding(.trailing)
+                            .sheet(item: $selectedRecipe) { selectedRecipe in
+                                RecipeSheetView(recipe: selectedRecipe)
+                            }
+                        }
+                    }.padding()
                 }
             }
             .navigationTitle("Discover")
