@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct CategoriesView: View {
+    
     var categories = Category.getCategories()
+    var courses: [Course] = Course.getCourses()
+    
     @State private var showCategoryModal: Bool = false
     @State private var selectedCategory: Category?
+    
+    @State private var selectedCourse: Course?
+    @State private var showingCourseSheet = false
+    
     var body: some View {
         NavigationStack {
             VStack (spacing: -8) {
-                Text("Categories")
+                Text("Ingredients")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .padding(.leading, -170)
@@ -35,7 +42,28 @@ struct CategoriesView: View {
                         }.padding()
                     }
                 
+                Text("Courses")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .padding(.leading, -170)
+                
+                
+                ScrollView (.horizontal, showsIndicators: false) {
+                    HStack () {
+                        ForEach(courses) { course in
+                            Button{
+                                showingCourseSheet.toggle()
+                                selectedCourse = course
+                            } label: {
+                                CourseCardView(course: course)
+                            }
+                            .padding(.trailing)
+                        }
+                    }.padding()
+                }
+                
             }
+            .navigationTitle("Categories")
         }
     }
 }
