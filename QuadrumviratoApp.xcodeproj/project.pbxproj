@@ -13,11 +13,12 @@
 		137AFFA5296F154800D3E37F /* CategoryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA2296F154800D3E37F /* CategoryCardView.swift */; };
 		137AFFA6296F154800D3E37F /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA3296F154800D3E37F /* CourseCardView.swift */; };
 		137AFFAA296F155F00D3E37F /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA7296F155F00D3E37F /* CategoriesView.swift */; };
-		137AFFAB296F155F00D3E37F /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA8296F155F00D3E37F /* CoursesView.swift */; };
 		137AFFAC296F155F00D3E37F /* FeaturedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137AFFA9296F155F00D3E37F /* FeaturedView.swift */; };
+		13820BC729758E5D001A9C6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13820BC629758E5D001A9C6D /* ContentView.swift */; };
+		13C614E92975956E00F888F5 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C614E82975956E00F888F5 /* FavoritesView.swift */; };
 		13F2193929714AF40040B432 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F2193829714AF40040B432 /* Course.swift */; };
 		3C222A56296F0E1D00BA9FBA /* QuadrumviratoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C222A55296F0E1D00BA9FBA /* QuadrumviratoApp.swift */; };
-		3C222A58296F0E1D00BA9FBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C222A57296F0E1D00BA9FBA /* ContentView.swift */; };
+		3C222A58296F0E1D00BA9FBA /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C222A57296F0E1D00BA9FBA /* DiscoverView.swift */; };
 		3C222A5A296F0E1F00BA9FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C222A59296F0E1F00BA9FBA /* Assets.xcassets */; };
 		3C222A5D296F0E1F00BA9FBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C222A5C296F0E1F00BA9FBA /* Preview Assets.xcassets */; };
 		3CB4E279297051DF008D1FBD /* RecipeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */; };
@@ -31,12 +32,13 @@
 		137AFFA2296F154800D3E37F /* CategoryCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCardView.swift; sourceTree = "<group>"; };
 		137AFFA3296F154800D3E37F /* CourseCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
 		137AFFA7296F155F00D3E37F /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
-		137AFFA8296F155F00D3E37F /* CoursesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		137AFFA9296F155F00D3E37F /* FeaturedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedView.swift; sourceTree = "<group>"; };
+		13820BC629758E5D001A9C6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		13C614E82975956E00F888F5 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		13F2193829714AF40040B432 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		3C222A52296F0E1D00BA9FBA /* QuadrumviratoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuadrumviratoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C222A55296F0E1D00BA9FBA /* QuadrumviratoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuadrumviratoApp.swift; sourceTree = "<group>"; };
-		3C222A57296F0E1D00BA9FBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3C222A57296F0E1D00BA9FBA /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		3C222A59296F0E1F00BA9FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C222A5C296F0E1F00BA9FBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSheetView.swift; sourceTree = "<group>"; };
@@ -69,9 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				137AFFA7296F155F00D3E37F /* CategoriesView.swift */,
-				137AFFA8296F155F00D3E37F /* CoursesView.swift */,
 				137AFFA9296F155F00D3E37F /* FeaturedView.swift */,
-				3C222A57296F0E1D00BA9FBA /* ContentView.swift */,
+				3C222A57296F0E1D00BA9FBA /* DiscoverView.swift */,
+				13C614E82975956E00F888F5 /* FavoritesView.swift */,
+				13820BC629758E5D001A9C6D /* ContentView.swift */,
 				3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */,
 				137AFFA0296F154800D3E37F /* Card */,
 			);
@@ -196,17 +199,18 @@
 			files = (
 				13F2193929714AF40040B432 /* Course.swift in Sources */,
 				137AFFAC296F155F00D3E37F /* FeaturedView.swift in Sources */,
+				13820BC729758E5D001A9C6D /* ContentView.swift in Sources */,
 				3CB4E27B29705834008D1FBD /* Ingredient.swift in Sources */,
 				137AFFAA296F155F00D3E37F /* CategoriesView.swift in Sources */,
+				13C614E92975956E00F888F5 /* FavoritesView.swift in Sources */,
 				137AFF9D296F151100D3E37F /* Recipe.swift in Sources */,
-				3C222A58296F0E1D00BA9FBA /* ContentView.swift in Sources */,
+				3C222A58296F0E1D00BA9FBA /* DiscoverView.swift in Sources */,
 				137AFFA6296F154800D3E37F /* CourseCardView.swift in Sources */,
 				3C222A56296F0E1D00BA9FBA /* QuadrumviratoApp.swift in Sources */,
 				137AFF9E296F151100D3E37F /* Category.swift in Sources */,
 				137AFFA5296F154800D3E37F /* CategoryCardView.swift in Sources */,
 				3CB4E279297051DF008D1FBD /* RecipeSheetView.swift in Sources */,
 				137AFFA4296F154800D3E37F /* FeaturedCardView.swift in Sources */,
-				137AFFAB296F155F00D3E37F /* CoursesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
