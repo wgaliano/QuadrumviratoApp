@@ -25,7 +25,6 @@ struct DiscoverView: View {
                             } label: {
                                 FeaturedCardView(recipe: recipe)
                             }
-                            .padding(.trailing)
                             .sheet(item: $selectedRecipe) { selectedRecipe in
                                 RecipeSheetView(recipe: selectedRecipe)
                             }
