@@ -10,11 +10,5 @@ import Foundation
 struct Course: Hashable, Identifiable {
     let id = UUID()
     let name: String
-    
-    static func getCourses () -> [Course] {
-        return [
-            Course (name: "Entrée"),
-            Course (name: "Main")
-        ]
-    }
+    let image: String
 }

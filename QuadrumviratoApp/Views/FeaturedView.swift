@@ -16,11 +16,6 @@ struct FeaturedView: View {
     var body: some View {
         NavigationStack {
             VStack (spacing: -8) {
-                Text("Featured")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.leading, -170)
-                
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack () {
                             ForEach(recipes) { recipe in
