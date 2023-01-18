@@ -54,7 +54,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		137AFF9A296F151100D3E37F /* Model */ = {
+		137AFF9A296F151100D3E37F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				137AFF9B296F151100D3E37F /* Recipe.swift */,
@@ -62,10 +62,10 @@
 				13F2193829714AF40040B432 /* Course.swift */,
 				3CB4E27A29705834008D1FBD /* Ingredient.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		137AFF9F296F153900D3E37F /* View */ = {
+		137AFF9F296F153900D3E37F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				137AFFA7296F155F00D3E37F /* CategoriesView.swift */,
@@ -75,7 +75,7 @@
 				3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */,
 				137AFFA0296F154800D3E37F /* Card */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		137AFFA0296F154800D3E37F /* Card */ = {
@@ -107,8 +107,9 @@
 		3C222A54296F0E1D00BA9FBA /* QuadrumviratoApp */ = {
 			isa = PBXGroup;
 			children = (
-				137AFF9F296F153900D3E37F /* View */,
-				137AFF9A296F151100D3E37F /* Model */,
+				3C35F32A29783361006075A0 /* ViewModels */,
+				137AFF9F296F153900D3E37F /* Views */,
+				137AFF9A296F151100D3E37F /* Models */,
 				3C222A55296F0E1D00BA9FBA /* QuadrumviratoApp.swift */,
 				3C222A59296F0E1F00BA9FBA /* Assets.xcassets */,
 				3C222A5B296F0E1F00BA9FBA /* Preview Content */,
@@ -122,6 +123,13 @@
 				3C222A5C296F0E1F00BA9FBA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C35F32A29783361006075A0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
