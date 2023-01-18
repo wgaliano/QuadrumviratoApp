@@ -15,11 +15,10 @@ struct DiscoverView: View {
     
     var body: some View {
         NavigationStack {
-            VStack (spacing: -8) {
-                ScrollView (.horizontal, showsIndicators: false) {
-                    HStack () {
-                        ForEach(recipes) { recipe in
-                            Button{
+            VStack {
+                ZStack {
+                    ForEach(recipes) { recipe in
+                            Button {
                                 showingRecipeSheet.toggle()
                                 selectedRecipe = recipe
                             } label: {
@@ -30,13 +29,14 @@ struct DiscoverView: View {
                                 RecipeSheetView(recipe: selectedRecipe)
                             }
                         }
-                    }.padding()
+                    .padding()
                 }
             }
             .navigationTitle("Discover")
         }
     }
 }
+
 
 
 
