@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct DiscoverView: View {
-    var recipes: [Recipe] = Recipe.getRecipes()
+    @ObservedObject var recipeVM = RecipeViewModel()
+    
     @State private var selectedRecipe: Recipe?
     @State private var showingRecipeSheet = false
     
@@ -17,7 +18,7 @@ struct DiscoverView: View {
         NavigationStack {
             VStack {
                 ZStack {
-                    ForEach(recipes) { recipe in
+                    ForEach(recipeVM.recipes) { recipe in
                             Button {
                                 showingRecipeSheet.toggle()
                                 selectedRecipe = recipe

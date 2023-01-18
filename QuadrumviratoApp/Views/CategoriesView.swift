@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct CategoriesView: View {
-    
-    var categories = Category.getCategories()
-    var courses: [Course] = Course.getCourses()
+    @ObservedObject var categoryVM = CategoryViewModel()
+    @ObservedObject var coursesVM = CourseViewModel()
     
     @State private var showCategoryModal: Bool = false
     @State private var selectedCategory: Category?
@@ -29,7 +28,7 @@ struct CategoriesView: View {
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack (spacing: 16) {
                             
-                            ForEach(categories) { category in
+                            ForEach(categoryVM.categories) { category in
                                 Button {
                                     showCategoryModal.toggle()
                                     selectedCategory = category
@@ -50,7 +49,7 @@ struct CategoriesView: View {
                 
                 ScrollView (.horizontal, showsIndicators: false) {
                     HStack () {
-                        ForEach(courses) { course in
+                        ForEach(coursesVM.courses) { course in
                             Button{
                                 showingCourseSheet.toggle()
                                 selectedCourse = course
@@ -63,7 +62,7 @@ struct CategoriesView: View {
                 }
                 
             }
-            .navigationTitle("Categories")
+            .navigationTitle("Search")
         }
     }
 }

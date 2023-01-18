@@ -13,7 +13,7 @@ struct CategoryCardView: View {
     var body: some View {
         
         VStack {
-            Image("\(category.name)")
+            Image("\(category.image)")
                 .resizable()
                 .scaledToFill()
                 .frame(
@@ -31,7 +31,7 @@ struct CategoryCardView: View {
 struct CategoryCardView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let category: Category = Category(name: "Pesce azzurro")
+        let category: Category = Category(name: "Pesce azzurro", image: "Blue fish")
         
         CategoryCardView(category: category)
     }
