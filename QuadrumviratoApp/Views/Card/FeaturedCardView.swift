@@ -12,18 +12,18 @@ struct FeaturedCardView: View {
     @State private var offset = CGSize.zero
     @State private var color: Color = .black
     
-    let recipe: Recipe
+    let hit: Hit?
     
     var body: some View {
         ZStack {
-            Image("\(recipe.name)")
-                .resizable()
-                .scaledToFill()
-                .frame(
-                    width: UIScreen.main.bounds.width*(3.5/4),
-                    height: //UIScreen.main.bounds.height*(1.8/4.8)
-                    UIScreen.main.bounds.height*(0.6)
-                )
+            AsyncImage(url: URL(string: (hit?.recipe.image)!))
+//                .resizable()
+//                .scaledToFill()
+//                .frame(
+//                    width: UIScreen.main.bounds.width*(3.5/4),
+//                    height: //UIScreen.main.bounds.height*(1.8/4.8)
+//                    UIScreen.main.bounds.height*(0.6)
+//                )
                 .cornerRadius(20)
         }
         .offset(x: offset.width * 1, y: offset.height * 0.4)
@@ -48,10 +48,10 @@ struct FeaturedCardView: View {
     func swipeCard(width: CGFloat) {
         switch width {
         case -500...(-150):
-            print("\(recipe.name) removed")
+            print("\(String(describing: hit?.recipe.label)) removed")
             offset = CGSize(width: -500, height: 0)
         case 150...500:
-            print("\(recipe.name) added")
+            print("\(String(describing: hit?.recipe.label)) added")
             offset = CGSize(width: 500, height: 0)
         default:
             offset = .zero
@@ -70,11 +70,8 @@ struct FeaturedCardView: View {
     }
 }
 
-struct FeaturedCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        let recipe: Recipe = Recipe(name: "Tuna with Potatoes", ingredients: [Ingredient(name: "Tonno"),Ingredient(name: "Patate")], description: "jhbjh", media: ["yguy"], process: "ufytcv")
-        
-        FeaturedCardView(recipe: recipe)
-    }
-}
+//struct FeaturedCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        FeaturedCardView(hit: )
+//    }
+//}

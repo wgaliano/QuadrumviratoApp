@@ -9,35 +9,38 @@
 import SwiftUI
 
 struct DiscoverView: View {
-    @ObservedObject var recipeVM = RecipeViewModel()
+    @ObservedObject var recipeVM = RecipeJSONViewModel()
     
-    @State private var selectedRecipe: Recipe?
+    @State private var selectedHit: Hit?
     @State private var showingRecipeSheet = false
     
     var body: some View {
         NavigationStack {
             VStack {
                 ZStack {
-                    ForEach(recipeVM.recipes) { recipe in
+                    if(recipeVM.recipes?.hits != nil) {
+                        ForEach((recipeVM.recipes?.hits)!) { currHit in
                             Button {
                                 showingRecipeSheet.toggle()
-                                selectedRecipe = recipe
+                                selectedHit = currHit
                             } label: {
-                                FeaturedCardView(recipe: recipe)
+                                FeaturedCardView(hit: currHit)
                             }
-                            .sheet(item: $selectedRecipe) { selectedRecipe in
-                                RecipeSheetView(recipe: selectedRecipe)
+                            .sheet(item: $selectedHit) { selectedHit in
+                                RecipeSheetView(hit: selectedHit)
                             }
                         }
-                    .padding()
+                    }
                 }
+                .padding()
             }
             .navigationTitle("Discover")
         }
+        .task {
+            await recipeVM.getHit()
+        }
     }
 }
-
-
 
 
 struct DiscoverView_Previews: PreviewProvider {
