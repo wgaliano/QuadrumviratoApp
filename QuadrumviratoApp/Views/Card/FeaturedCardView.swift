@@ -16,17 +16,25 @@ struct FeaturedCardView: View {
     
     var body: some View {
             VStack {
-                AsyncImage(url: URL(string: (hit?.recipe.image)!))
-                //                .resizable()
-                //                .scaledToFill()
-                //                .frame(
-                //                    width: UIScreen.main.bounds.width*(3.5/4),
-                //                    height: //UIScreen.main.bounds.height*(1.8/4.8)
-                //                    UIScreen.main.bounds.height*(0.6)
-                //                )
+                AsyncImage(url: URL(string: (hit?.recipe.image)!)){ image in
+                    image
+                } placeholder: {
+                    Text("Loading...")
+                    .frame(
+                        width: UIScreen.main.bounds.width*(3.5/4),
+                        height: UIScreen.main.bounds.height*(0.6)
+                    )
+                }
                 .cornerRadius(20)
                 
-                Text((hit?.recipe.label)!)
+                AsyncImage(url: URL(string: (hit?.recipe.image)!)){ image in
+                    Text((hit?.recipe.label)!)
+                        .foregroundColor(.black)
+                        .onTapGesture {
+                            //do nothing
+                        }
+                } placeholder: {}
+                
             }
             .offset(x: offset.width * 1, y: offset.height * 0.4)
 //        .rotationEffect(.degrees(Double(offset.width / 40)))
