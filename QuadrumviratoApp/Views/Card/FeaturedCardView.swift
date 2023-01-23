@@ -28,6 +28,9 @@ struct FeaturedCardView: View {
                 
                 AsyncImage (url: URL(string: (hit?.recipe.image)!)) { image in
                     Text((hit?.recipe.label)!).foregroundColor(.black)
+                        .onTapGesture {
+                            //do nothing
+                        }
                 } placeholder: {
                     
                 }
