@@ -9,35 +9,46 @@
 import SwiftUI
 
 struct DiscoverView: View {
-    @ObservedObject var recipeVM = RecipeViewModel()
+    @ObservedObject var recipeVM = RecipeJSONViewModel()
     
-    @State private var selectedRecipe: Recipe?
+    @State private var selectedHit: Hit?
     @State private var showingRecipeSheet = false
+    
+    @State private var loadedRecipes: Bool = false
     
     var body: some View {
         NavigationStack {
             VStack {
-                ZStack {
-                    ForEach(recipeVM.recipes) { recipe in
-                            Button {
-                                showingRecipeSheet.toggle()
-                                selectedRecipe = recipe
-                            } label: {
-                                FeaturedCardView(recipe: recipe)
-                            }
-                            .sheet(item: $selectedRecipe) { selectedRecipe in
-                                RecipeSheetView(recipe: selectedRecipe)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        if(recipeVM.recipes?.hits != nil) {
+                            ForEach((recipeVM.recipes?.hits)!) { currHit in
+                                Button {
+                                    print(recipeVM.recipes?.hits.count)
+                                    showingRecipeSheet.toggle()
+                                    selectedHit = currHit
+                                } label: {
+                                    FeaturedCardView(hit: currHit)
+                                }
+                                .sheet(item: $selectedHit) { selectedHit in
+                                    RecipeSheetView(hit: selectedHit)
+                                }
                             }
                         }
+                    }
                     .padding()
                 }
             }
             .navigationTitle("Discover")
         }
+        .task {
+            if loadedRecipes == false {
+                await recipeVM.getHit()
+                loadedRecipes = true
+            }
+        }
     }
 }
-
-
 
 
 struct DiscoverView_Previews: PreviewProvider {
