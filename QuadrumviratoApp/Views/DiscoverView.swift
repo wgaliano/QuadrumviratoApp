@@ -17,22 +17,25 @@ struct DiscoverView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                ZStack {
-                    if(recipeVM.recipes?.hits != nil) {
-                        ForEach((recipeVM.recipes?.hits)!) { currHit in
-                            Button {
-                                showingRecipeSheet.toggle()
-                                selectedHit = currHit
-                            } label: {
-                                FeaturedCardView(hit: currHit)
-                            }
-                            .sheet(item: $selectedHit) { selectedHit in
-                                RecipeSheetView(hit: selectedHit)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        if(recipeVM.recipes?.hits != nil) {
+                            ForEach((recipeVM.recipes?.hits)!) { currHit in
+                                Button {
+                                    print(recipeVM.recipes?.hits.count)
+                                    showingRecipeSheet.toggle()
+                                    selectedHit = currHit
+                                } label: {
+                                    FeaturedCardView(hit: currHit)
+                                }
+                                .sheet(item: $selectedHit) { selectedHit in
+                                    RecipeSheetView(hit: selectedHit)
+                                }
                             }
                         }
                     }
+                    .padding()
                 }
-                .padding()
             }
             .navigationTitle("Discover")
         }

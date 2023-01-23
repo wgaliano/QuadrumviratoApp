@@ -45,7 +45,9 @@ struct RecipeSheetView: View {
                             .font(.title2)
                             .fontWeight(.semibold)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                        Text(hit.recipe.label)
+                        ForEach(hit.recipe.ingredientLines.indices) {
+                            Text(hit.recipe.ingredientLines[$0])
+                        }
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
                     .padding(.top)

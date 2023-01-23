@@ -41,9 +41,14 @@ class RecipeJSONViewModel: ObservableObject {
             let request = URLRequest(url: url!)
             let (data,_) = try await URLSession.shared.data(for: request)
             self.recipes = try decoder.decode(RecipeJSON.self, from: data)
+            print(self.recipes?.count)
         } catch {
             print (error.localizedDescription)
         }
+    }
+    
+    static func hitToArray(){
+        
     }
 }
 
