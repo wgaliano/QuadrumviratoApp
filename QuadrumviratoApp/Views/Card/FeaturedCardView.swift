@@ -19,7 +19,10 @@ struct FeaturedCardView: View {
                 AsyncImage(url: URL(string: (hit?.recipe.image)!)) { image in
                     image.foregroundColor(.black)
                 } placeholder: {
-                    ProgressView()
+                    Text("Loading...")
+                        .foregroundColor(.black)
+                        .frame(width: UIScreen.main.bounds.width*(3.5/4),
+                               height: UIScreen.main.bounds.height*(0.6))
                 }
                 //                .resizable()
                 //                .scaledToFill()
@@ -30,7 +33,13 @@ struct FeaturedCardView: View {
                 //                )
                 .cornerRadius(20)
                 
-                Text((hit?.recipe.label)!).foregroundColor(.black)
+                AsyncImage (url: URL(string: (hit?.recipe.image)!)) { image in
+                    Text((hit?.recipe.label)!).foregroundColor(.black)
+                } placeholder: {
+                    
+                }
+                
+                
             }
             .offset(x: offset.width * 1, y: offset.height * 0.4)
 //        .rotationEffect(.degrees(Double(offset.width / 40)))

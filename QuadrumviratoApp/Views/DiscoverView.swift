@@ -14,6 +14,8 @@ struct DiscoverView: View {
     @State private var selectedHit: Hit?
     @State private var showingRecipeSheet = false
     
+    @State private var loadedRecipes: Bool = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -40,7 +42,10 @@ struct DiscoverView: View {
             .navigationTitle("Discover")
         }
         .task {
-            await recipeVM.getHit()
+            if loadedRecipes == false {
+                await recipeVM.getHit()
+                loadedRecipes = true
+            }
         }
     }
 }
