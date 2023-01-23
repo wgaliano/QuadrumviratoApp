@@ -25,6 +25,7 @@
 		3C35F330297837D0006075A0 /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35F32F297837D0006075A0 /* CourseViewModel.swift */; };
 		3CB4E279297051DF008D1FBD /* RecipeSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */; };
 		3CB4E27B29705834008D1FBD /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB4E27A29705834008D1FBD /* Ingredient.swift */; };
+		7B288EE7297EE45800F2F6DE /* NetworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B288EE6297EE45800F2F6DE /* NetworkViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		3C35F32F297837D0006075A0 /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
 		3CB4E278297051DF008D1FBD /* RecipeSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeSheetView.swift; sourceTree = "<group>"; };
 		3CB4E27A29705834008D1FBD /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		7B288EE6297EE45800F2F6DE /* NetworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				3C35F32B297833D8006075A0 /* RecipeJSONViewModelRecipeViewModel.swift */,
 				3C35F32D29783727006075A0 /* CategoryViewModel.swift */,
 				3C35F32F297837D0006075A0 /* CourseViewModel.swift */,
+				7B288EE6297EE45800F2F6DE /* NetworkViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B288EE7297EE45800F2F6DE /* NetworkViewModel.swift in Sources */,
 				13F2193929714AF40040B432 /* Course.swift in Sources */,
 				13820BC729758E5D001A9C6D /* ContentView.swift in Sources */,
 				3CB4E27B29705834008D1FBD /* Ingredient.swift in Sources */,
