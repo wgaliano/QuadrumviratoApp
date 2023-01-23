@@ -14,7 +14,7 @@ struct CourseCardView: View {
     var body: some View {
        
             VStack {
-                Image("\(course.name)")
+                Image("\(course.image)")
                     .resizable()
                     .scaledToFill()
                     .frame(
@@ -31,7 +31,7 @@ struct CourseCardView: View {
 
 struct CourseCardView_Previews: PreviewProvider {
     
-    static let course = Course (name: "Main")
+    static let course = Course (name: "Main", image: "Main")
     static var previews: some View {
         CourseCardView(course: course)
     }
