@@ -11,6 +11,7 @@ struct RecipeSheetView: View {
     var hit: Hit
     @Environment(\.presentationMode) var presentationMode
     @State private var closeModal = false
+    @State private var buttonTapped: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -70,6 +71,15 @@ struct RecipeSheetView: View {
                     self.presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("Cancel")
+                })
+                .navigationBarItems(leading: Button {
+                    buttonTapped.toggle()
+                } label: {
+                    if buttonTapped {
+                        Image(systemName: "heart.fill")
+                    } else {
+                        Image(systemName: "heart")
+                    }
                 })
             }
         }

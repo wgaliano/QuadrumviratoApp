@@ -16,7 +16,11 @@ struct FeaturedCardView: View {
     
     var body: some View {
             VStack {
-                AsyncImage(url: URL(string: (hit?.recipe.image)!))
+                AsyncImage(url: URL(string: (hit?.recipe.image)!)) { image in
+                    image.foregroundColor(.black)
+                } placeholder: {
+                    ProgressView()
+                }
                 //                .resizable()
                 //                .scaledToFill()
                 //                .frame(
@@ -26,7 +30,7 @@ struct FeaturedCardView: View {
                 //                )
                 .cornerRadius(20)
                 
-                Text((hit?.recipe.label)!)
+                Text((hit?.recipe.label)!).foregroundColor(.black)
             }
             .offset(x: offset.width * 1, y: offset.height * 0.4)
 //        .rotationEffect(.degrees(Double(offset.width / 40)))
