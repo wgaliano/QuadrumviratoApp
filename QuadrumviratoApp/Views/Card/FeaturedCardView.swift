@@ -24,13 +24,6 @@ struct FeaturedCardView: View {
                         .frame(width: UIScreen.main.bounds.width*(3.5/4),
                                height: UIScreen.main.bounds.height*(0.6))
                 }
-                //                .resizable()
-                //                .scaledToFill()
-                //                .frame(
-                //                    width: UIScreen.main.bounds.width*(3.5/4),
-                //                    height: //UIScreen.main.bounds.height*(1.8/4.8)
-                //                    UIScreen.main.bounds.height*(0.6)
-                //                )
                 .cornerRadius(20)
                 
                 AsyncImage (url: URL(string: (hit?.recipe.image)!)) { image in
