@@ -27,7 +27,9 @@ struct FeaturedCardView: View {
                 .cornerRadius(20)
                 
                 AsyncImage (url: URL(string: (hit?.recipe.image)!)) { image in
-                    Text((hit?.recipe.label)!).foregroundColor(.black)
+                    Text((hit?.recipe.label)!)
+                        .foregroundColor(.black)
+                        .bold()
                         .onTapGesture {
                             //do nothing
                         }
