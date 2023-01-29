@@ -8,43 +8,23 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @ObservedObject var recipeVM = RecipeJSONViewModel()
-    
-    @State private var selectedHit: Hit?
-    @State private var showingRecipeSheet = false
-    
-    @State private var loadedRecipes: Bool = false
+    @EnvironmentObject var coreDataVM: CoreDataViewModel
     
     var body: some View {
         NavigationStack {
             VStack {
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack {
-                        if(recipeVM.recipes?.hits != nil) {
-                            ForEach((recipeVM.recipes?.hits)!) { currHit in
-                                Button {
-                                    print(recipeVM.recipes?.hits.count)
-                                    showingRecipeSheet.toggle()
-                                    selectedHit = currHit
-                                } label: {
-                                    FeaturedCardView(hit: currHit)
-                                }
-                                .sheet(item: $selectedHit) { selectedHit in
-                                    RecipeSheetView(hit: selectedHit)
-                                }
-                            }
+                List {
+                    ForEach(coreDataVM.recipes) { recipe in
+                        NavigationLink {
+                            FavouritesRow(recipe: recipe)
+                        } label: {
+                            Text(recipe.name ?? "")
                         }
                     }
-                    .padding()
+                    .onDelete(perform: coreDataVM.deleteRecipe)
                 }
             }
-            .navigationTitle("Favorites")
-        }
-        .task {
-            if loadedRecipes == false {
-                await recipeVM.getHit()
-                loadedRecipes = true
-            }
+            .navigationTitle("Favourites")
         }
     }
 }

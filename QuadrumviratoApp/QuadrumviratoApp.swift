@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct QuadrumviratoApp: App {
+    @StateObject private var coreDataVM = CoreDataViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(coreDataVM)
         }
     }
 }
