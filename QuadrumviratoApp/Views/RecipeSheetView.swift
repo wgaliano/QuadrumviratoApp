@@ -24,8 +24,9 @@ struct RecipeSheetView: View {
                             .font(.title2)
                             .fontWeight(.semibold)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                        
                         ForEach(hit.recipe.ingredientLines.indices) {
-                            Text(hit.recipe.ingredientLines[$0])
+                            Text("\u{2022}"+hit.recipe.ingredientLines[$0])
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }

@@ -22,15 +22,15 @@ struct DiscoverView: View {
             if(monitor.isConnected){
                 VStack {
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
+                        HStack (spacing: 16){
                             if(recipeVM.recipes?.hits != nil) {
-                                
                                 ForEach((recipeVM.recipes?.hits)!) { currHit in
                                     Button {
                                         showingRecipeSheet.toggle()
                                         selectedHit = currHit
                                     } label: {
                                         FeaturedCardView(hit: currHit)
+                                            .shadow(color: Color.black.opacity(0.2), radius: 4)
                                     }
                                     .sheet(item: $selectedHit) { selectedHit in
                                         RecipeSheetView(hit: selectedHit)
@@ -44,6 +44,12 @@ struct DiscoverView: View {
                 .navigationTitle("Discover")
             } else {
                 Image(systemName: "wifi.slash")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(
+                        width: UIScreen.main.bounds.width/3,
+                        height: UIScreen.main.bounds.height/3
+                    )
             }
         }
         .task {

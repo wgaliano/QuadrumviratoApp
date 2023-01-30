@@ -17,25 +17,45 @@ struct FeaturedCardView: View {
     var body: some View {
             VStack {
                 AsyncImage(url: URL(string: (hit?.recipe.image)!)) { image in
-                    image.foregroundColor(.black)
-                } placeholder: {
-                    Text("Loading...")
+                    image
+                        .resizable()
+                        .scaledToFill()
                         .foregroundColor(.black)
-                        .frame(width: UIScreen.main.bounds.width*(3.5/4),
-                               height: UIScreen.main.bounds.height*(0.6))
+                        .frame(
+                            width: UIScreen.main.bounds.width*(3.5/4),
+                            height: UIScreen.main.bounds.height*(0.6)
+                        )
+                        .brightness(-0.3)
+                        .overlay(
+                            Text((hit?.recipe.label)!)
+                                .foregroundColor(.white)
+                                .bold()
+                                .font(.largeTitle)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .frame(maxHeight: .infinity, alignment: .bottom)
+                                .padding()
+                        )
+                } placeholder: {
+                    ProgressView()
+                        .frame(
+                            width: UIScreen.main.bounds.width*(3.5/4),
+                            height: UIScreen.main.bounds.height*(0.6)
+                        )
+                        .padding()
                 }
                 .cornerRadius(20)
                 
-                AsyncImage (url: URL(string: (hit?.recipe.image)!)) { image in
-                    Text((hit?.recipe.label)!)
-                        .foregroundColor(.black)
-                        .bold()
-                        .onTapGesture {
-                            //do nothing
-                        }
-                } placeholder: {
-                    
-                }
+//                AsyncImage (url: URL(string: (hit?.recipe.image)!)) { image in
+//                    Text((hit?.recipe.label)!)
+//                        .foregroundColor(.black)
+//                        .bold()
+//                        .font(.title2)
+//                        .onTapGesture {
+//                            //do nothing
+//                        }
+//                } placeholder: {
+//
+//                }
                 
                 
             }
