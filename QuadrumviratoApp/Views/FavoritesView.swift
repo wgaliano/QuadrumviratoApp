@@ -23,7 +23,6 @@ struct FavoritesView: View {
                         if(recipeVM.recipes?.hits != nil) {
                             ForEach((recipeVM.recipes?.hits)!) { currHit in
                                 Button {
-                                    print(recipeVM.recipes?.hits.count)
                                     showingRecipeSheet.toggle()
                                     selectedHit = currHit
                                 } label: {

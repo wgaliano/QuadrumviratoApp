@@ -42,14 +42,17 @@ struct RecipeSheetView: View {
                     
                     //section description
                     VStack {
-                        Text("Brief description")
+                        Text("Ingredients")
                             .font(.title2)
                             .fontWeight(.semibold)
                             .frame(maxWidth: .infinity, alignment: .leading)
+                        
                         ForEach(hit.recipe.ingredientLines.indices) {
-                            Text(hit.recipe.ingredientLines[$0])
+                            Text("\u{2022}"+hit.recipe.ingredientLines[$0])
                         }
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        
+                        
                     }
                     .padding(.top)
                     .padding(.horizontal)
