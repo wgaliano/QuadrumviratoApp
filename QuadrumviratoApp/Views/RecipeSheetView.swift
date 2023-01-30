@@ -11,36 +11,14 @@ struct RecipeSheetView: View {
     var hit: Hit
     @Environment(\.presentationMode) var presentationMode
     @State private var closeModal = false
-    @State private var buttonTapped: Bool = false
+    @State private var favouritesButton: Bool = false
+    @EnvironmentObject var coreDataVM: CoreDataViewModel
     
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
                     //section ingredients
-//                    VStack {
-//                        Text("Ingredients")
-//                            .font(.title2)
-//                            .fontWeight(.semibold)
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                        VStack (spacing: -10){
-//                            ForEach(hit.recipe.ingredientLines.indices) {
-//                                HStack {
-//                                    Spacer()
-//                                        .frame(width: 25)
-//                                    Circle()
-//                                        .frame(width: 10)
-//                                        .offset(y:-10)
-//                                    Text("\(ingredient.name)\n")
-//                                        .frame(maxWidth: .infinity, alignment: .leading)
-//                                }
-//                            }
-//                        }
-//                    }
-//                    .padding(.top)
-//                    .padding(.horizontal)
-                    
-                    //section description
                     VStack {
                         Text("Ingredients")
                             .font(.title2)
@@ -51,23 +29,9 @@ struct RecipeSheetView: View {
                             Text("\u{2022}"+hit.recipe.ingredientLines[$0])
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        
                     }
                     .padding(.top)
                     .padding(.horizontal)
-                    
-                    //section process
-//                    VStack {
-//                        Text("Process")
-//                            .font(.title2)
-//                            .fontWeight(.semibold)
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                        Text(recipe.process)
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                    }
-//                    .padding(.top)
-//                    .padding(.horizontal)
                 }
                 .navigationTitle(hit.recipe.label)
                 .navigationBarItems(trailing: Button {
@@ -76,9 +40,24 @@ struct RecipeSheetView: View {
                     Text("Cancel")
                 })
                 .navigationBarItems(leading: Button {
-                    buttonTapped.toggle()
+                    favouritesButton.toggle()
+                    if(favouritesButton == true) {
+                        var recipeIngredients: [IngredientEntity] = []
+                        
+                        for ingredientInfo in hit.recipe.ingredientLines {
+                            if(!coreDataVM.checkIngredients(info: ingredientInfo)) {
+                                coreDataVM.addIngredient(info: ingredientInfo)
+                            }
+                            
+                            recipeIngredients.append(coreDataVM.ingredients.first(where: { coreDataIngredient in
+                                coreDataIngredient.info == ingredientInfo
+                            })!)
+                        }
+                        
+                        coreDataVM.addRecipe(id: hit.id, name: hit.recipe.label, calories: hit.recipe.calories, totalWeight: hit.recipe.totalWeight, ingredients: recipeIngredients)
+                    }
                 } label: {
-                    if buttonTapped {
+                    if favouritesButton {
                         Image(systemName: "heart.fill")
                     } else {
                         Image(systemName: "heart")
