@@ -11,16 +11,16 @@ The simplest way to install SwiftLint is by downloading SwiftLint.pkg from the l
 ### 2) Integrate SwiftLint with Xcode
 
 In order to integrate SwiftLint with Xcode project target to get warnings and errors displayed in the Xcode IDE, you just need to add a new “Run Script Phase” with following script:
-
+```
   if which swiftlint >/dev/null; then
     swiftlint
   else
     echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
   fi
-
+```
 This script will run automatically whenever you build the project
 
-3) .swiftlint.yml File
+### 3) .swiftlint.yml File
 
 Take the .swiftlint.yml file of your choosing and save it in your project directory (parent), the one where the file .xcodeproj is located. For example you can use this one: 
 
