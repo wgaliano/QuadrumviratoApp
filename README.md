@@ -19,6 +19,7 @@ In order to integrate SwiftLint with Xcode project target to get warnings and er
   fi
 ```
 This script will run automatically whenever you build the project
+To reach "Run Script Phase" you have to: Click on "Project" then go on the "Build Phases" section, then click the "+" button on the left and  add "Run Script". Finally paste the script in the box in that section.
 
 ### 3) .swiftlint.yml File
 
