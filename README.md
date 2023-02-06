@@ -1,5 +1,19 @@
 # QuadrumviratoApp
 
+## Description
+QuadrumviratoApp allows you to discover new recipes and save the ones you like the most through the use of Edamam API. All of this has been made by using the following technologies:
+1) **CoreData** to store the recipes 
+2) **API calls** to **Edamam API** gather the data of the recipes and to filter the result based on different parameters
+3) **SwiftLint** to improve the overall code quality
+4) **SwiftUI** to make the UX/UI of the app
+5) **MVVM design pattern** to accelerate the development process
+
+## Usage
+The whole application works through a tab bar that allows you to switch between the views which are:
+1) **Discover** where you can find the suggested recipes in a scrollView that allows you to preview them and open them with a single tap to see the related details and add them to the favourites
+2) **Search** where you can search songs based on different parameters like name of the recipe, ingredients, calories etc. Plus, you can also see a collection of different categories of recipes
+3) **Favourites** where you can see the collection of your favourite recipes
+
 ## Install SwiftLint
 
 ### 1) Installation
