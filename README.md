@@ -20,8 +20,10 @@ The whole application works through a tab bar that allows you to switch between 
 
 The simplest way to install SwiftLint is by downloading SwiftLint.pkg from the latest GitHub release and running it at:
   - https://github.com/realm/SwiftLint/releases
-  - Alternatively, you can also install SwiftLint using Homebrew by running this command: brew install swiftlint
-
+  - Alternatively, you can also install SwiftLint using Homebrew by running this command: 
+```
+      brew install swiftlint
+```
 ### 2) Integrate SwiftLint with Xcode
 
 In order to integrate SwiftLint with Xcode project target to get warnings and errors displayed in the Xcode IDE, you just need to add a new “Run Script Phase” with following script:
