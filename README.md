@@ -22,18 +22,18 @@ The simplest way to install SwiftLint is by downloading SwiftLint.pkg from the l
   - https://github.com/realm/SwiftLint/releases
   - Alternatively, you can also install SwiftLint using Homebrew by running this command: 
 ```
-      brew install swiftlint
+brew install swiftlint
 ```
 ### 2) Integrate SwiftLint with Xcode
 
 In order to integrate SwiftLint with Xcode project target to get warnings and errors displayed in the Xcode IDE, you just need to add a new “Run Script Phase” with following script:
 ```bash
-  if which swiftlint >/dev/null; then
-    swiftlint
-  else
-    echo "warning: SwiftLint not installed!"
-    echo "Download from https://github.com/realm/SwiftLint, or use brew install swiftlint"
-  fi
+if which swiftlint >/dev/null; then
+  swiftlint
+else
+  echo "warning: SwiftLint not installed!"
+  echo "Download from https://github.com/realm/SwiftLint, or use brew install swiftlint"
+fi
 ```
 This script will run automatically whenever you build the project
 To reach "Run Script Phase" you have to: Click on "Project" then go on the "Build Phases" section, then click the "+" button on the left and  add "Run Script". Finally paste the script in the box in that section.
