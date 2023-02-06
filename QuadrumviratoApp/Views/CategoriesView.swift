@@ -19,21 +19,21 @@ struct CategoriesView: View {
     
     var body: some View {
         NavigationStack {
-            VStack (spacing: -8) {
+            VStack(spacing: -8) {
                 Text("Ingredients")
                     .font(.title2)
                     .fontWeight(.semibold)
                     .padding(.leading, -170)
                 
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack (spacing: 16) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 16) {
                             
                             ForEach(categoryVM.categories) { category in
                                 Button {
                                     showCategoryModal.toggle()
                                     selectedCategory = category
                                 } label: {
-                                    CategoryCardView (category: category)
+                                    CategoryCardView(category: category)
                                 }
                                 .padding(.trailing)
                             }
@@ -46,11 +46,10 @@ struct CategoriesView: View {
                     .fontWeight(.semibold)
                     .padding(.leading, -170)
                 
-                
-                ScrollView (.horizontal, showsIndicators: false) {
-                    HStack () {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
                         ForEach(coursesVM.courses) { course in
-                            Button{
+                            Button {
                                 showingCourseSheet.toggle()
                                 selectedCourse = course
                             } label: {

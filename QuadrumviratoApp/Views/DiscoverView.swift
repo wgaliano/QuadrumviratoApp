@@ -1,4 +1,3 @@
-
 //
 //  ContentView.swift
 //  ECS
@@ -19,11 +18,11 @@ struct DiscoverView: View {
     
     var body: some View {
         NavigationStack {
-            if(monitor.isConnected){
+            if monitor.isConnected {
                 VStack {
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack (spacing: 16){
-                            if(recipeVM.recipes?.hits != nil) {
+                        HStack(spacing: 16) {
+                            if recipeVM.recipes?.hits != nil {
                                 ForEach((recipeVM.recipes?.hits)!) { currHit in
                                     Button {
                                         showingRecipeSheet.toggle()
@@ -53,7 +52,7 @@ struct DiscoverView: View {
             }
         }
         .task {
-            if loadedRecipes == false {
+            if !loadedRecipes {
                 await recipeVM.getHit()
                 loadedRecipes = true
             }
@@ -61,10 +60,8 @@ struct DiscoverView: View {
     }
 }
 
-
 struct DiscoverView_Previews: PreviewProvider {
     static var previews: some View {
         DiscoverView()
     }
 }
-

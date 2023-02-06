@@ -18,7 +18,7 @@ struct RecipeSheetView: View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
-                    //section ingredients
+                    // Section ingredients
                     VStack {
                         Text("Ingredients")
                             .font(.title2)
@@ -41,11 +41,11 @@ struct RecipeSheetView: View {
                 })
                 .navigationBarItems(leading: Button {
                     favouritesButton.toggle()
-                    if(favouritesButton == true) {
+                    if favouritesButton {
                         var recipeIngredients: [IngredientEntity] = []
                         
                         for ingredientInfo in hit.recipe.ingredientLines {
-                            if(!coreDataVM.checkIngredients(info: ingredientInfo)) {
+                            if !coreDataVM.checkIngredients(info: ingredientInfo) {
                                 coreDataVM.addIngredient(info: ingredientInfo)
                             }
                             
@@ -57,19 +57,20 @@ struct RecipeSheetView: View {
                         coreDataVM.addRecipe(id: hit.id, name: hit.recipe.label, calories: hit.recipe.calories, totalWeight: hit.recipe.totalWeight, ingredients: recipeIngredients)
                     }
                 } label: {
-                    if favouritesButton {
-                        Image(systemName: "heart.fill")
-                    } else {
-                        Image(systemName: "heart")
-                    }
+//                    if favouritesButton {
+//                        Image(systemName: "heart.fill")
+//                    } else {
+//                        Image(systemName: "heart")
+//                    }
+                    (favouritesButton ? Image(systemName: "heart.fill") : Image(systemName: "heart"))
                 })
             }
         }
     }
 }
 
-//struct RecipeSheetView_Previews: PreviewProvider {
+// struct RecipeSheetView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        RecipeSheetView(hit:)
 //    }
-//}
+// }

@@ -31,9 +31,8 @@ struct CourseCardView: View {
 
 struct CourseCardView_Previews: PreviewProvider {
     
-    static let course = Course (name: "Main", image: "Main")
+    static let course = Course(name: "Main", image: "Main")
     static var previews: some View {
         CourseCardView(course: course)
     }
 }
-

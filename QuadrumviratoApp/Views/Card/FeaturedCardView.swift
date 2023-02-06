@@ -57,14 +57,13 @@ struct FeaturedCardView: View {
 //
 //                }
                 
-                
             }
-            //.offset(x: offset.width * 1, y: offset.height * 0.4)
+            // .offset(x: offset.width * 1, y: offset.height * 0.4)
     }
 }
 
-//struct FeaturedCardView_Previews: PreviewProvider {
+// struct FeaturedCardView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        FeaturedCardView(hit: )
 //    }
-//}
+// }

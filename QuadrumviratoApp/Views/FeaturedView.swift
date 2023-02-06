@@ -15,11 +15,11 @@ struct FeaturedView: View {
     
     var body: some View {
         NavigationStack {
-            VStack (spacing: -8) {
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack () {
+            VStack(spacing: -8) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
                             ForEach(recipes) { recipe in
-                                Button{
+                                Button {
                                     showingRecipeSheet.toggle()
                                     selectedRecipe = recipe
                                 } label: {

@@ -5,9 +5,9 @@
 ////  Created by Walter Galiano on 12/01/23.
 ////
 //
-//import Foundation
+// import Foundation
 //
-//struct Ingredient: Identifiable {
+// struct Ingredient: Identifiable {
 //    let id = UUID()
 //    let name: String
 //
@@ -18,4 +18,4 @@
 //        }
 //        return newIngredientSet
 //    }
-//}
+// }

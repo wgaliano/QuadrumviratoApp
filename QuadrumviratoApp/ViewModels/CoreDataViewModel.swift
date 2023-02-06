@@ -16,7 +16,7 @@ class CoreDataViewModel: ObservableObject {
     
     init() {
         container = NSPersistentContainer(name: "RecipesDataModel")
-        container.loadPersistentStores { (description, error) in
+        container.loadPersistentStores { (_, error) in
             if let error = error {
                 print("ERROR LOADING CORE DATA. \(error)")
             } else {
@@ -48,10 +48,8 @@ class CoreDataViewModel: ObservableObject {
     }
     
     func checkIngredients(info: String) -> Bool {
-        for ingr in ingredients {
-            if(ingr.info == info) {
-                return true
-            }
+        for ingr in ingredients where ingr.info == info {
+            return true
         }
         
         return false
@@ -72,7 +70,7 @@ class CoreDataViewModel: ObservableObject {
         newRecipe.name = name
         newRecipe.calories = calories
         newRecipe.totalWeight = totalWeight
-        //newRecipe.image = image.jpegData(compressionQuality: 1.0)
+// newRecipe.image = image.jpegData(compressionQuality: 1.0)
         
         newRecipe.ingredients = NSSet(array: ingredients)
         

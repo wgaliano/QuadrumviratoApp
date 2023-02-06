@@ -13,21 +13,21 @@ struct ContentView: View {
             DiscoverView()
                 .tag(0)
                 .tabItem {
-                    Image (systemName: "fork.knife")
+                    Image(systemName: "fork.knife")
                     Text("Discover")
                 }
             
             CategoriesView()
                 .tag(1)
                 .tabItem {
-                    Image (systemName: "magnifyingglass")
+                    Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
             
             FavoritesView()
                 .tag(2)
                 .tabItem {
-                    Image (systemName: "suit.heart")
+                    Image(systemName: "suit.heart")
                     Text("Favorites")
                     
                 }

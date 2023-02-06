@@ -10,7 +10,7 @@ import Foundation
 class CourseViewModel: ObservableObject {
     
     @Published var courses: [Course] = [
-        Course (name: "Entrée", image: "Entrée"),
-        Course (name: "Main", image: "Main")
+        Course(name: "Entrée", image: "Entrée"),
+        Course(name: "Main", image: "Main")
     ]
 }

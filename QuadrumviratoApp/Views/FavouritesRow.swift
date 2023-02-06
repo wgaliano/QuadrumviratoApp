@@ -32,8 +32,8 @@ struct FavouritesRow: View {
     }
 }
 
-//struct FavouritesRow_Previews: PreviewProvider {
+// struct FavouritesRow_Previews: PreviewProvider {
 //    static var previews: some View {
 //        FavouritesRow()
 //    }
-//}
+// }

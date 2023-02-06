@@ -108,15 +108,15 @@ struct Digest: Codable {
 }
 
 enum SchemaOrgTag: String, Codable {
-    case carbohydrateContent = "carbohydrateContent"
-    case cholesterolContent = "cholesterolContent"
-    case fatContent = "fatContent"
-    case fiberContent = "fiberContent"
-    case proteinContent = "proteinContent"
-    case saturatedFatContent = "saturatedFatContent"
-    case sodiumContent = "sodiumContent"
-    case sugarContent = "sugarContent"
-    case transFatContent = "transFatContent"
+    case carbohydrateContent
+    case cholesterolContent
+    case fatContent
+    case fiberContent
+    case proteinContent
+    case saturatedFatContent
+    case sodiumContent
+    case sugarContent
+    case transFatContent
 }
 
 enum Unit: String, Codable {
@@ -225,5 +225,3 @@ struct RecipeJSONLinks: Codable {
         self.wrappedValue = wrappedValue
     }
 }
-
-
