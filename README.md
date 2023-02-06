@@ -15,7 +15,8 @@ In order to integrate SwiftLint with Xcode project target to get warnings and er
   if which swiftlint >/dev/null; then
     swiftlint
   else
-    echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+    echo "warning: SwiftLint not installed!"
+    echo "Download from https://github.com/realm/SwiftLint, or use brew install swiftlint"
   fi
 ```
 This script will run automatically whenever you build the project
