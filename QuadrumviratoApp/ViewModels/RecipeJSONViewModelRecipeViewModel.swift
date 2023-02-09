@@ -25,7 +25,7 @@ class RecipeJSONViewModel: ObservableObject {
                 ),
                 URLQueryItem(
                     name: "q",
-                    value: "Chicken Vesuvio"
+                    value: "Pasta"
                 ),
                 URLQueryItem(
                     name: "app_id",

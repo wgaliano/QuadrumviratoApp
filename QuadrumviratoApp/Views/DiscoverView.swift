@@ -23,7 +23,7 @@ struct DiscoverView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 16) {
                             if recipeVM.recipes?.hits != nil {
-                                ForEach((recipeVM.recipes?.hits)!) { currHit in
+                                ForEach((recipeVM.recipes?.hits.reversed().prefix(10))!) { currHit in
                                     Button {
                                         showingRecipeSheet.toggle()
                                         selectedHit = currHit
